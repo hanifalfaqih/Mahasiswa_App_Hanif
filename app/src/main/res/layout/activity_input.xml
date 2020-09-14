@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
+    android:padding="6dp"
+    tools:context=".InputActivity">
+
+    <EditText
+        android:id="@+id/edt_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:background="@drawable/background_input_text"
+        android:padding="10dp"
+        android:drawablePadding="4dp"
+        android:layout_marginBottom="4dp"
+        android:drawableStart="@drawable/ic_baseline_person"/>
+
+    <EditText
+        android:id="@+id/edt_input_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        android:background="@drawable/background_input_text"
+        android:padding="10dp"
+        android:drawablePadding="4dp"
+        android:layout_marginBottom="4dp"
+        android:drawableStart="@drawable/ic_baseline_phone"/>
+
+    <EditText
+        android:id="@+id/edt_input_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:background="@drawable/background_input_text"
+        android:padding="10dp"
+        android:drawablePadding="4dp"
+        android:layout_marginBottom="4dp"
+        android:drawableStart="@drawable/ic_baseline_home"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:backgroundTint="#67CD6B"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_weight="1"
+            android:backgroundTint="#FA6666"/>
+
+    </LinearLayout>
+
+</LinearLayout>
