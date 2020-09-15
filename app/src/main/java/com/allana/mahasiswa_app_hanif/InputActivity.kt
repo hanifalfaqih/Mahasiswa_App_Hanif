@@ -22,7 +22,7 @@ class InputActivity : AppCompatActivity() {
             edt_input_address.setText(getData.mahasiswaAlamat)
             edt_input_phone_number.setText(getData.mahasiswaNohp)
 
-            btn_save.text = "Update"
+            btn_save.text = getString(R.string.update)
         }
 
         if (btn_save.text == "Update"){
@@ -31,7 +31,29 @@ class InputActivity : AppCompatActivity() {
             }
         } else {
             btn_save.setOnClickListener {
-                inputData(edt_input_name.text.toString(), edt_input_phone_number.text.toString(), edt_input_address.text.toString())
+                val edtName = edt_input_name.text.toString()
+                val edtPhoneNumber = edt_input_phone_number.text.toString().trim()
+                val edtAddress = edt_input_address.text.toString()
+
+                var isEmptyField = false
+                when{
+                    edtName.isEmpty() -> {
+                        isEmptyField = true
+                        edt_input_name.error = "Nama harus diisi!"
+                    }
+                    edtAddress.isEmpty() -> {
+                        isEmptyField = true
+                        edt_input_address.error = "Alamat harus diisi!"
+                    }
+                    edtPhoneNumber.isEmpty() -> {
+                        isEmptyField = true
+                        edt_input_phone_number.error = "Nomor handphone harus diisi!"
+                    }
+                }
+
+                if (!isEmptyField){
+                    inputData(edtName, edtPhoneNumber, edtAddress)
+                }
             }
         }
 
